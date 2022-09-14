@@ -1,9 +1,16 @@
-#ifndef main_h
-#define main_h
+*
+*
+*  * File: 2-print_alphabet.c
+*
+*   * Auth: Brennan D Baraban
+*
+*    */
+
+
 
 #include <stdio.h>
 
-
+#include "main.h"
 
 /**
  *
