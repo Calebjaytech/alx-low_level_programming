@@ -1,7 +1,5 @@
 #include <stdio.h>
-#include "main.h"                                                                                                                       
-
-        
+#include "main.h"
 /**
  * main - Prints the numbers from 1-100, but for multiples of three,
  *        Fizz is printed instead of the number, for multiples of five,
@@ -9,9 +7,11 @@
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
 	int num;
+
 	for (num = 1; num <= 100; num++)
 	{
 		if ((num % 3) == 0 && (num % 5) == 0)
