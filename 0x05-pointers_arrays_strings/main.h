@@ -1,14 +1,22 @@
-define main.h
+#ifndef main_H
+#define main_H
+
+
 
 /**
- * File: main.h
+ *
+ *  * File: main.h
+ *
+ *   * Auth: Brennan D Baraban
+ *
+ *    * Desc: Header file containing prototypes for all functions
+ *
+ *     *       used in the 0x04-pointers_arrays_strings directory.
+ *
+ *      */
 
- * Auth: Brennan D Baraban
 
- * Desc: Header file containing prototypes for all functions
 
- *       used in the 0x04-pointers_arrays_strings directory.
- */
 #include <stdlib.h>
 
 
