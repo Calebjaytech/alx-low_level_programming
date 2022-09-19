@@ -1,4 +1,4 @@
-fndef main_H
+fndef main.h
 
 #define main.h
 
