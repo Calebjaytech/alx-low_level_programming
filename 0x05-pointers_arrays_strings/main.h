@@ -1,6 +1,6 @@
 fndef main_H
 
-#define main_H
+#define main.h
 
 /**
  * File: main.h
