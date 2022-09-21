@@ -13,5 +13,3 @@ size_t _strlen(const char *str)
 		length++;
 	return (length);
 }
-Footer
-© 2022 GitHub, Inc.
