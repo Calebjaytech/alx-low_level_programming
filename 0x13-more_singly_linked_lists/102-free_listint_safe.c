@@ -15,6 +15,7 @@ size_t free_listint_safe(listint_t **h);
 size_t looped_listint_count(listint_t *head)
 {
 	listint_t *tortoise, *hare;
+
 	size_t nodes = 1;
 
 	if (head == NULL || head->next == NULL)
@@ -56,10 +57,8 @@ size_t looped_listint_count(listint_t *head)
  *
  * Description: The function sets the head to NULL.
  */
-
 size_t free_listint_safe(listint_t **h)
 {
-
 	listint_t *tmp;
 	size_t nodes, index;
 
@@ -67,7 +66,7 @@ size_t free_listint_safe(listint_t **h)
 	if (nodes == 0)
 	{
 		for (; h != NULL && *h != NULL; nodes++)
-		{
+	{
 			tmp = (*h)->next;
 			free(*h);
 			*h = tmp;
@@ -85,4 +84,4 @@ size_t free_listint_safe(listint_t **h)
 	}
 	h = NULL;
 	return (nodes);
-
+}
