@@ -1,4 +1,4 @@
-uth: Jacob caleb
+; uth: Jacob caleb
 ; Desc: 64-bit assembly program that prints
 ;       Hello, Holberton followed by a new line.
 
