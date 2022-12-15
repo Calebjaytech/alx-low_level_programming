@@ -2,7 +2,6 @@
 #define DYNAMIC_LIB_H
 
 
-
 #include <stdlib.h>
 
 
