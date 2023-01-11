@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 
-/**
+**
 
  * hash_table_set - Add or update an element in a hash table.
 
