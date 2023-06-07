@@ -1,8 +1,3 @@
-/*
- * File: 100-change.c
- * Auth: Caleb
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 

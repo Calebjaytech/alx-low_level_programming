@@ -1,37 +1,46 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <stddef.h>
+#include <string.h>
 #include "lists.h"
-/**
- * delete_nodeint_at_index - Deletes the node at a given
- *                           index of a listint_t list.
- * @head: A pointer to the address of the
- *        head of the listint_t list.
- * @index: The index of the node to be deleted - indices start at 0.
- *
- * Return: On success - 1.
- *         On failure - -1.
- */
 
+/**
+ * delete_nodeint_at_index - function that delete node at given position
+ * @head: head of the list
+ * @index: index of the node to insert new node
+ *
+ * Return: 1 if successful, -1 if it failed
+ */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *tmp, *copy = *head;
+	listint_t *tmp, *_deleted;
+	unsigned int n = 0;
 
-	unsigned int node;
-
-	if (copy == NULL)
+	if (*head == NULL)
 		return (-1);
+
+	tmp = *head;
 	if (index == 0)
 	{
-		*head = (*head)->next;
-		free(copy);
+		tmp = tmp->next;
+		free(*head);
+		*head = tmp;
 		return (1);
 	}
-	for (node = 0; node < (index - 1); node++)
+	else
 	{
-		if (copy->next == NULL)
+		while (n != (index - 1) && tmp != NULL)
+		{
+			n++;
+			tmp = tmp->next;
+		}
+
+		if (n != (index - 1))
 			return (-1);
-		copy = copy->next;
+		_deleted = tmp->next;
+		tmp->next = _deleted->next;
+		free(_deleted);
+		return (1);
 	}
-	tmp = copy->next;
-	copy->next = tmp->next;
-	free(tmp);
-	return (1);
+
 }

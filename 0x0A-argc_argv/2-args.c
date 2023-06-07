@@ -1,23 +1,19 @@
-/*
- * File: 2-args.c
- * Auth: Caleb
- */
-
+#include "main.h"
 #include <stdio.h>
-
+#define UNUSED(x) (void)(x)
 /**
- * main - Prints all arguments it receives.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
- *
- * Return: Always 0.
+ * main - main function
+ * @argc: argument count
+ * @argv: array of arguments
+ * Return: always returns 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char  *argv[])
 {
-	int arg;
+	int i;
 
-	for (arg = 0; arg < argc; arg++)
-		printf("%s\n", argv[arg]);
-
+	for (i = 0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);
+	}
 	return (0);
 }

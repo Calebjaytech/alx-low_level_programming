@@ -1,50 +1,45 @@
-/*
- * File: 5-argstostr.c
- * Auth: Caleb
- */
-
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-
 /**
- * argstostr - Concatenates all arguments of the program into a string;
- *             arguments are separated by a new line in the string.
- * @ac: The number of arguments passed to the program.
- * @av: An array of pointers to the arguments.
- *
- * Return: If ac == 0, av == NULL, or the function fails - NULL.
- *         Otherwise - a pointer to the new string.
+ * argstostr - function that concatenates all the arguments of program
+ * @ac: argument count
+ * @av: array of arguments
+ * Return: pointer to new string
  */
 char *argstostr(int ac, char **av)
 {
-	char *str;
-	int arg, byte, index, size = ac;
+	int size = 0;
+	char *s;
+	int i = 0;
+	int j = 0;
+	int k = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (arg = 0; arg < ac; arg++)
+	for (i = 0; i < ac; i++)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
+		for (j = 0; av[i][j] != '\0'; j++)
 			size++;
 	}
 
-	str = malloc(sizeof(char) * size + 1);
-
-	if (str == NULL)
+	size += (ac + 1);
+	s = malloc(sizeof(char) * size);
+	if (s == NULL)
 		return (NULL);
-
-	index = 0;
-
-	for (arg = 0; arg < ac; arg++)
+	k = 0;
+	for (i = 0; i < ac; i++)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
-			str[index++] = av[arg][byte];
-
-		str[index++] = '\n';
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			s[k] = av[i][j];
+			k++;
+		}
+		s[k] = '\n';
+		k++;
 	}
-
-	str[size] = '\0';
-
-	return (str);
+	s[k] = '\0';
+	return (s);
+	free(s);
 }

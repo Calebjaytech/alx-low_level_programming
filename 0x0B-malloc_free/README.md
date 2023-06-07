@@ -1,7 +1,17 @@
-C - malloc, free
+## 0x0B. C - malloc, free
 
-In this project, I learned about the difference between automatic and dynamic location as well as how to use malloc, free, and valgrind in C. Tests heavy_check_mark
+[0-create_array.c](./0-create_array.c) - function that creates an array of chars, and initializes it with a specific char
 
-tests: Folder of test files. Provided by Alxn School. Header File file_folder
+[1-strdup.c](./1-strdup.c) - function that returns a pointer to a newly allocated space in memory, which contains a copy of the string given as a parameter.
 
-mainn.h: Header file containing prototypes for all functions written in the project. File Protoype 0-create_array.c char *create_array(unsigned int size, char c); 1-strdup.c char *_strdup(char *str); 2-str_concat.c char *str_concat(char *s1, char *s2); 3-alloc_grid.c int **alloc_grid(int width, int height); 4-free_grid.c void free_grid(int **grid, int height); 5-argstostr.c char *argstostr(int ac, char **av); 100-strtow.c char **strtow(char *str); Tasks page_with_curl
+[2-str_concat.c](./2-str_concat.c) - function that concatenates two strings.
+
+[3-alloc_grid.c](./3-alloc_grid.c) - function that returns a pointer to a 2 dimensional array of integers.
+
+[4-free_grid.c](./4-free_grid.c) -  function that frees a 2 dimensional grid previously created by your alloc_grid function.
+
+[100-argstostr.c](./100-argstostr.c) - function that concatenates all the arguments of your program.
+
+[101-strtow.c](./101-strtow.c) - function that splits a string into words.01~
+
+

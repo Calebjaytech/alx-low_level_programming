@@ -1,44 +1,36 @@
-/*
- * File: 2-str_concat.c
- * Auth: Caleb
- */
-
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-
 /**
- * str_concat - Concatenates two strings.
- * @s1: The string to be concatenated upon.
- * @s2: The string to be concatenated to s1.
- *
- * Return: If concatenation fails - NULL.
- *         Otherwise - a pointer the newly-allocated space in memory
- *                     containing the concatenated strings.
+ * str_concat - function that concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: concatenated string
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *concat_str;
-	int index, concat_index = 0, len = 0;
+	int i = 0;
+	int len1 = 0;
+	int len2 = 0;
+	char *c;
 
 	if (s1 == NULL)
 		s1 = "";
-
 	if (s2 == NULL)
 		s2 = "";
 
-	for (index = 0; s1[index] || s2[index]; index++)
-		len++;
-
-	concat_str = malloc(sizeof(char) * len);
-
-	if (concat_str == NULL)
+	while (s1[len1] != '\0')
+		len1++;
+	while (s2[len2] != '\0')
+		len2++;
+	c = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (c == NULL)
 		return (NULL);
-
-	for (index = 0; s1[index]; index++)
-		concat_str[concat_index++] = s1[index];
-
-	for (index = 0; s2[index]; index++)
-		concat_str[concat_index++] = s2[index];
-
-	return (concat_str);
+	for (i = 0; i < len1; i++)
+		c[i] = s1[i];
+	for (i = 0; i < len2; i++)
+		c[i + len1] = s2[i];
+	c[i + len1] = '\0';
+	return (c);
+	free(c);
 }

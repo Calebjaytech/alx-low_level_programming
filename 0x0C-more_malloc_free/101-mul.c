@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
 
 /**
  * _print - moves a string one place to the left and prints the string
@@ -18,11 +20,11 @@ void _print(char *str, int l)
 		if (str[i] != '0')
 			j = 1;
 		if (j || i == l - 1)
-			_putchar(str[i]);
+			putchar(str[i]);
 		i++;
 	}
 
-	_putchar('\n');
+	putchar('\n');
 	free(str);
 }
 
@@ -61,6 +63,7 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 	}
 	return (dest);
 }
+
 /**
  * check_for_digits - checks the arguments to ensure they are digits
  * @av: pointer to arguments
@@ -105,6 +108,7 @@ void init(char *str, int l)
  *
  * Return: zero, or exit status of 98 if failure
  */
+
 int main(int argc, char *argv[])
 {
 	int l1, l2, ln, ti, i;
@@ -115,7 +119,7 @@ int main(int argc, char *argv[])
 	if (argc != 3 || check_for_digits(argv))
 	{
 		for (ti = 0; e[ti]; ti++)
-			_putchar(e[ti]);
+			putchar(e[ti]);
 		exit(98);
 	}
 	for (l1 = 0; argv[1][l1]; l1++)
@@ -127,7 +131,7 @@ int main(int argc, char *argv[])
 	if (a == NULL)
 	{
 		for (ti = 0; e[ti]; ti++)
-			_putchar(e[ti]);
+			putchar(e[ti]);
 		exit(98);
 	}
 	init(a, ln - 1);
@@ -137,7 +141,7 @@ int main(int argc, char *argv[])
 		if (t == NULL)
 		{
 			for (ti = 0; e[ti]; ti++)
-				_putchar(e[ti]);
+				putchar(e[ti]);
 			free(a);
 			exit(98);
 		}

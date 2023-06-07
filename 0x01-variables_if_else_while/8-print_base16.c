@@ -1,22 +1,22 @@
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
- * main - Prints numbers between 0 to 9 and letters between a to f.
+ * main - entry point
  *
- * Return: Always 0 (Success)
+ * Return:always return 0
+ *
  */
 int main(void)
 {
-	int i;
+	int num;
+	char alpha;
 
-	for (i = 48; i < 58; i++)
-	{
-		 putchar(i);
-	}
-			for (i = 97; i < 103; i++)
-	{
-				 putchar(i);
-	}
+	for (num = 0; num < 10; num++)
+		putchar(num + '0');
+	for (alpha = 'a'; alpha <= 'f'; alpha++)
+		putchar(alpha);
 	putchar('\n');
+
 	return (0);
 }

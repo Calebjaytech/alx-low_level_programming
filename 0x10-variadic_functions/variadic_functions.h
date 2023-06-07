@@ -1,32 +1,35 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
-
-/*
- * File: variadic_functions.h
- * Auth: Oni Michael
- * Desc: Header file containing prototypes for all functions
- *       used in the 0x0F-variadic_functions directory.
- */
-
 #include <stdarg.h>
+/**
+ * sum_them_all - function that returns the sum of all args
+ * @n: integer to sum
+ *
+ * Return: sum of all parameters
+ */
+int sum_them_all(const unsigned int n, ...);
 
 /**
- * struct printer - A new struct type defining a printer.
- * @symbol: A symbol representing a data type.
- * @print: A function pointer to a function that prints
- *         a data type corresponding to symbol.
+ * print_numbers - function that print numbers
+ * @separator: separator character
+ * @n: const var
+ *
  */
-
-typedef struct printer
-{
-	char *symbol;
-	void (*print)(va_list arg);
-
-} printer_t;
-
-int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
+
+/**
+ * print_strings - function that print strings
+ * @separator: separator character
+ * @n: number of args
+ *
+ */
 void print_strings(const char *separator, const unsigned int n, ...);
+
+/**
+ * print_all - prints all
+ * @format: format string that says arg types
+ *
+ */
 void print_all(const char * const format, ...);
 
 #endif

@@ -1,20 +1,15 @@
-/*
- * File: 1-args.c
- * Auth: Caleb
- */
-
+#include "main.h"
 #include <stdio.h>
-
+#define UNUSED(x) (void)(x)
 /**
- * main - Prints the number of arguments passed to it.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
- *
- * Return: Always 0.
+ * main - main function
+ * @argc: argument counter
+ * @argv: array of arguments
+ *Return: always Return 0
  */
-int main(int argc, char __attribute__((__unused__)) *argv[])
+int main(int argc, char  *argv[])
 {
+	UNUSED(argv);
 	printf("%d\n", argc - 1);
-
 	return (0);
 }
